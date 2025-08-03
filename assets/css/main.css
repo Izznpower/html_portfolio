@@ -19,7 +19,7 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: rgba(199, 214, 197, 0.59); /*#faf9fb; /* Background color for the entire website, including individual sections */
+  /*--background-color: rgba(199, 214, 197, 0.59); /*#faf9fb; /* Background color for the entire website, including individual sections */
   --default-color: #0a0f14; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0f2943; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #e87532; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -39,7 +39,7 @@
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
-.light-background {
+/* .light-background {
   --background-color: #faf9fb;
   --surface-color: #ffffff;
 }
@@ -50,12 +50,14 @@
   --heading-color: #ffffff;
   --surface-color: #252525;
   --contrast-color: #ffffff;
-}
+} */
 
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
 }
+
+
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
@@ -143,8 +145,8 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  /* color: var(--default-color);
+  background-color: var(--background-color); */
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -344,6 +346,7 @@ h6 {
     z-index: 9997;
   }
 
+
   .navmenu ul {
     display: none;
     list-style: none;
@@ -358,6 +361,8 @@ h6 {
     z-index: 9998;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   }
+
+  
 
   .navmenu a,
   .navmenu a:focus {
@@ -631,8 +636,8 @@ h6 {
 --------------------------------------------------------------*/
 section,
 .section {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  /* color: var(--default-color);
+  background-color: var(--background-color); */
   padding: 60px 0;
   scroll-margin-top: 90px;
   overflow: clip;
@@ -659,7 +664,7 @@ section,
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 10px;
-  background: linear-gradient(120deg, var(--heading-color), var(--accent-color));
+  background: linear-gradient(120deg, #00CEC8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -670,7 +675,8 @@ section,
   width: 200px;
   height: 20px;
   margin: 0 auto;
-  color: var(--accent-color);
+  /* color: var(--accent-color); */
+  color:#00CEC8;
   opacity: 0.5;
 }
 
@@ -683,7 +689,8 @@ section,
   margin: 15px auto 0;
   font-size: 16px;
   max-width: 700px;
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  /* color: color-mix(in srgb, var(--default-color), transparent 25%); */
+  color: white;
   line-height: 1.8;
 }
 
@@ -701,11 +708,11 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 /* Banner section */
-.banner_area {
+/* .banner_area {
   width: 90%;
   max-width: 75rem;
   margin: 0 auto;
-  padding: 20px;
+  /* padding: 20px; 
 }
 
 .banner_hero {
@@ -718,7 +725,7 @@ section,
 }
 
 .hero {
-  padding: 80px 0;
+  /* padding: 80px 0; 
   position: relative;
   overflow: hidden;
 }
@@ -728,7 +735,7 @@ section,
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
-}
+} */
 
 @media (max-width: 991px) {
   .hero .content h2 {
@@ -916,7 +923,8 @@ section,
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: var(--accent-color);
+  /* color: var(--accent-color); */
+  color: white;
   margin-bottom: 1rem;
   display: block;
 }
@@ -925,11 +933,13 @@ section,
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+  color: white;
 }
 
 .about .about-content .lead {
   font-size: 1.1rem;
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  /* color: color-mix(in srgb, var(--default-color), transparent 25%); */
+  color:white;
 }
 
 .about .personal-info {
@@ -1019,7 +1029,7 @@ section,
 .skills-buttons span {
     /* border: 1px solid black; */
     margin: auto;    /* Top right bottom left */
-    background: rgb(230, 222, 222);
+    background: #00CEC8;
     padding: 10px 15px;
     border-radius: 50px;
     font-size: 0.9rem;

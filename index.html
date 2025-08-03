@@ -27,6 +27,97 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    #typewriter {
+      padding-left: 30%;
+      font-family: monospace;
+      border-right: 2px solid black;
+      /* white-space: nowrap; */
+      /* overflow: hidden; */
+      overflow-wrap: break-word;
+      display: inline-block;
+      animation: blink 0.7s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+#banner {
+width: 100%;
+}
+
+  .banner_picture {
+  position: relative;
+  width: 100%;
+}
+
+.banner_picture img {
+  width: 125%;
+  height: auto;
+  display: block;
+}
+
+.text_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;         /* Fits within banner width */
+  width: 100%;            /* Responsive */
+  text-align: center;
+  color: white;
+  z-index: 2;
+  padding: 20px;
+  /* background-color: rgba(0, 0, 0, 0.4); /* Optional for better contrast */
+  border-radius: 10px;
+  
+} 
+
+.text_container h1,
+.text_container h4 {
+  color:aliceblue;
+  ;
+}
+
+/* toggle style */
+body {
+  background-color: #121212;
+  color: #f1f1f1;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+/* Light mode */
+body.light-mode {
+  /* background-color: #eee; */
+  color: #222;
+}
+
+p.light-mode, h2.light-mode {
+  color: #333; /* Darker text in light mode */
+}
+
+#toggleBtn {
+  padding: 10px 20px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#toggleBtn:hover {
+  background-color: #357ABD;
+}
+
+</style>
+
   <!-- =======================================================
   * Template Name: EasyFolio
   * Template URL: https://bootstrapmade.com/easyfolio-bootstrap-portfolio-template/
@@ -43,8 +134,8 @@
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">The ScriptBunny!</h1>
+        <img src="assets/img/rabbit-head-logo-simple-minimalist-design-modern-rabbit-logo-abstract-animal-logo-vector.png" alt="logo">
+        <h1 class="sitename">The Script Bunny!</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -87,6 +178,8 @@
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
 
+      <div><button id="toggleBtn">Light Mode</button>
+      </div>
     </div>
   </header>
 
@@ -94,15 +187,13 @@
     <!-- Banner Section-->
     <section id="banner" class="banner_hero">
       <div class="banner_area">
-        <!-- <div class="banner_picture">
-          <img src="assets/img/profile/banner_right_img.jpg" alt="Profile Image"> -->
-          <div class="text_container">
-            <h1> Welcome, I'm YingY Chan, Izzie</h1>
-            <h1>The ScriptBunny!</h1>
-            <p></p>
-            <p> Clinical Data analyst | Software Development student</p>
+        <div class="banner_picture">
+          <img src="assets/img/Black and Blue Animated Gamer Twitch Banner.gif" alt="Animated banner">
+          <div class="text_container" id="typewriter">
+            <h1 id="type-target"> Welcome to the domian of The ScriptBunny!</h1>
+            <h4 id="type-target">Clinical Data scientist | Software App Developer!</h4>
           </div>
-        <!-- </div> -->
+        </div>
       </div>
     </section>
    
@@ -117,7 +208,7 @@
         <h2>About</h2>
         <div class="title-shape">
           <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke=#00CEC8 stroke-width="2"></path>
           </svg>
         </div>
         <p>Backend developer &amp; Data scienctist speclized in healthcare and fitness.</p>
@@ -137,15 +228,12 @@
               <!-- <span class="subtitle">About Me</span>
 
               <h3>Backend developer &amp; Data scienctist speclized in healthcare and fitness.</h3> -->
-                <p class="lead mb-4">Hi, This is YY Chan (Izzie)—a first-generation immigrant, woman in tech, and Biomedical Engineering graduate with 7+ years of experience in healthcare and research. I’m passionate about using technology to improve systems and solve real-world problems. With skills in Python, JavaScript, HTML, and CSS, I enjoy troubleshooting, debugging, and creating efficient solutions. My strong background in customer service supports my work in IT support, software development, and data analysis. I’m excited to bring a fresh perspective and a collaborative mindset to innovative tech teams.</p>
-                <p class="lead mb-4">As a first-generation immigrant and woman in tech, my path hasn’t always been straightforward. I’ve had to navigate spaces where I was often one of the few, and sometimes the only, person who looked or sounded like me. But those challenges have fueled my resilience, sharpened my problem-solving skills, and deepened my empathy—qualities I bring into every role I take on. </p>
-    <p class="lead mb-4">Over the years, I’ve built a solid foundation in programming (Python, JavaScript, HTML, CSS) and developed a love for troubleshooting, debugging, and optimizing tech solutions. My strong background in customer service has taught me how to translate complex technical issues into simple, supportive conversations that actually help people—whether it’s in IT support, software development, or system implementation.</p>
-    <p class="lead mb-4">I'm currently exploring opportunities in IT Support, Desktop Support, Software Development, and Data Analysis/Science. I’m excited to bring a fresh perspective, a collaborative spirit, and a deep commitment to continuous learning to any team I join.</p>
-    <p class="lead mb-4">Let’s connect—I’m always open to discussing how I can contribute to innovative, inclusive, and forward-thinking projects.</p>
+                <p >Hi, This is YY Chan (Izzie)—a first-generation immigrant, woman in tech, and Biomedical Engineering graduate with 7+ years of experience in healthcare and research. I’m passionate about using technology to improve systems and solve real-world problems. With skills in Python, JavaScript, HTML, and CSS, I enjoy troubleshooting, debugging, and creating efficient solutions. My strong background in customer service supports my work in IT support, software development, and data analysis. I’m excited to bring a fresh perspective and a collaborative mindset to innovative tech teams.</p>
+                <!-- <p >As a first-generation immigrant and woman in tech, my path hasn’t always been straightforward. I’ve had to navigate spaces where I was often one of the few, and sometimes the only, person who looked or sounded like me. But those challenges have fueled my resilience, sharpened my problem-solving skills, and deepened my empathy—qualities I bring into every role I take on. </p> -->
+                <p >Over the years, I’ve built a solid foundation in programming (Python, JavaScript, HTML, CSS) and developed a love for troubleshooting, debugging, and optimizing tech solutions. My strong background in customer service has taught me how to translate complex technical issues into simple, supportive conversations that actually help people—whether it’s in IT support, software development, or system implementation.</p>
+                <p >I'm currently exploring opportunities in IT Support, Desktop Support, Software Development, and Data Analysis/Science. I’m excited to bring a fresh perspective, a collaborative spirit, and a deep commitment to continuous learning to any team I join.</p>
+                <p >Let’s connect—I’m always open to discussing how I can contribute to innovative, inclusive, and forward-thinking projects.</p>
                 <p>Interest/Hobbies: Biking, Hiking, Camping, Traveling, Volunteering, Animation, 3D printing, Crafting, etc</p>
-
-              
-
               <!-- <p class="mb-4">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p> -->
 
               <!-- <div class="personal-info">

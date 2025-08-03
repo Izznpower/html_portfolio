@@ -6,9 +6,51 @@
 * License: https://bootstrapmade.com/license/
 */
 
+const elements = document.querySelectorAll("#type-target");
+
+    elements.forEach((el, i) => {
+      const fullText = el.textContent;
+      el.textContent = ""; // clear all text at the beginning.
+      el.classList.add("typewriter");
+
+      let charIndex = 0;
+
+      // Delaying each type. Setting interval between type.
+      setTimeout(function typeChar() {
+        if (charIndex <= fullText.length) {
+          el.textContent = fullText.substring(0, charIndex++);
+          setTimeout(typeChar, 100);
+        }
+      }, i * (fullText.length * 100 + 500)); // stagger the start
+    });
+ 
+  //Backgound color toogle
+  const toggleBtn = document.getElementById("toggleBtn");
+
+toggleBtn.addEventListener("click", () => {
+  // Toggle body class
+  document.body.classList.toggle("light-mode");
+  
+  // Toggle class on all paragraphs
+  document.querySelectorAll("p").forEach(p => {
+    p.classList.toggle("light-mode");
+  });
+  
+  // Toggle class on all h2 headings
+  document.querySelectorAll("h2").forEach(h2 => {
+    h2.classList.toggle("light-mode");
+  });
+ 
+  if (document.body.classList.contains("light-mode")) {
+    toggleBtn.innerText = "Dark Mode";
+  } else {
+    toggleBtn.innerText = "Light Mode";
+  }
+});
+
+
 (function() {
   "use strict";
-
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
